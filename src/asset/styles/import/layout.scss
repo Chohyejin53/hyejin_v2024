@@ -1,0 +1,467 @@
+//header
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    
+    &.fixed {
+        -webkit-backdrop-filter: blur(21.9px);
+        backdrop-filter: blur(21.9px);
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: ease-in-out 1s background-color;
+        z-index: 9999;
+
+        .btn_wrap {
+            .btn_blog {
+                border-color: #000;
+                color: #000;
+
+                &:active {
+                    background-color: #000;
+                    color: #fff;
+                
+
+                    @include mobile {
+                        background-color: transparent;
+                        color: #2cdd85;
+                        border-bottom: 1px solid #2cdd85;
+                    }
+                }
+            }
+
+            .btn_github {
+                background: url(../../img/icon_github_black.png) 0 0 no-repeat;
+                background-size: 32px 32px;
+
+                @include mobile {
+                    display: none;
+                }
+                
+            }
+
+            .btn_menu {
+                background: url(../../img/icon_hamburger_black.png) no-repeat 0 0;
+                background-size: 32px 32px;
+
+                @include tablet-1080 {
+                    display: inline-block;
+                }
+    
+                @include mobile {
+                    display: inline-block;
+                    background-size: 26px 26px;
+                }
+            }
+        }
+
+
+        .logo{
+            color: #222;
+        }
+
+        .gnb {
+            li {
+                color: #222;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.08);
+                }
+    
+                &.on {
+                    background-color: #000;
+    
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.on {
+        .menu_wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+
+        .btn_wrap {
+            .btn_blog {
+                display: none;
+            }
+            .btn_menu {
+                display: none;
+            }
+            .btn_close {
+                display: inline-block;
+            }
+
+            .btn_github {
+                background: url(../../img/icon_github_black.png) 0 0 no-repeat;
+                background-size: 32px 32px;
+
+                @include mobile {
+                    display: inline-block;
+                    background-size: 26px 26px;
+                }
+            }
+        }
+
+        .logo{
+            color: #222;
+        }
+    }
+    
+    .fixed_header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 64px;
+        z-index: 10;
+
+        @include tablet-1080 {
+            height: 58px;
+        }
+
+        @include mobile {
+            height: 54px;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: 17px;
+        left: 40px;
+        font-size: 12px;
+        line-height: 1.2;
+        color: #fff;
+        letter-spacing: 2px;
+
+        @include tablet-1080 {
+            top: 16px;
+            left: 25px;
+        }
+
+        @include mobile {
+            top: 14px;
+        }
+
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    .gnb {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 15px 0;
+        z-index: 20;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        @include tablet-1080 {
+            display: none;
+        }
+        @include mobile {
+            display: none;
+        }
+        
+
+        li {
+            float: left;
+            margin: 0 7px;
+            -webkit-border-radius: 18px;
+            border-radius: 18px;
+            color: #fff;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.08);
+            }
+
+            &.on {
+                background-color: #fff;
+
+                a {
+                    color: #222;
+                }
+            }
+
+
+            a {
+                display: block;
+                padding: 0 20px;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 34px;
+            }
+        }
+    }
+    
+
+    .menu_wrap {
+        display: none;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: -webkit-calc(var(--vh, 1vh) * 100);
+        height: calc(var(--vh, 1vh) * 100);
+        padding-top: 82px;
+        padding-bottom: -webkit-calc(constant(safe-area-inset-bottom) + 25px);
+        padding-bottom: calc(constant(safe-area-inset-bottom) + 25px);
+        padding-bottom: -webkit-calc(env(safe-area-inset-bottom) + 25px);
+        padding-bottom: calc(env(safe-area-inset-bottom) + 25px);
+        background-color: #4de68e;
+        -ms-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+
+        @include mobile {
+            padding-top: 101px;
+            padding-bottom: -webkit-calc(constant(safe-area-inset-bottom) + 50px);
+            padding-bottom: calc(constant(safe-area-inset-bottom) + 50px);
+            padding-bottom: -webkit-calc(env(safe-area-inset-bottom) + 50px);
+            padding-bottom: calc(env(safe-area-inset-bottom) + 50px);
+        }
+
+
+        .menu_list {
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+
+            li {
+                .notice {
+                    a {
+                        font-weight: 900;
+                        color: #3e77f4;
+                    }
+                }
+
+
+                a {
+                    display: block;
+                    padding: 16px 0;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 1.1;
+
+                    @include mobile {
+                        padding: 18px 0 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn_wrap {
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        font-size: 0;
+
+        @include tablet-1080 {
+            top: 12px;
+            right: 25px;
+        }
+
+        @include mobile {
+            top: 16px;
+            right: 20px;
+        }
+
+        .btn_blog {
+            display: inline-block;
+            min-width: 60px;
+            height: 31px;
+            border: 1.5px solid #fff;
+            font-size: 13px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 31px;
+            letter-spacing: -0.26px;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-border-radius: 18px;
+            border-radius: 18px;
+            -webkit-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+
+            @include tablet-1080 {
+                height: 30px;
+                font-size: 12px;
+                letter-spacing: -0.24px;
+            }
+
+            @include mobile {
+                display: inline-block;
+                width: auto;
+                min-width: 40px;
+                height: 16px;
+                margin-top: 4px;
+                padding-bottom: 3px;
+                border: none;
+                border-bottom: 1px solid #fff;
+                -webkit-border-radius: 0;
+                border-radius: 0;
+                font-size: 12px;
+                line-height: 1;
+                letter-spacing: -0.24px;
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.08);
+
+                @include mobile {
+                    background-color: transparent;
+                }
+            }
+
+            &:active {
+                background-color: #fff;
+                color: #000;
+
+                @include mobile {
+                    background-color: transparent;
+                    background-color: transparent;
+                    color: #4de68e;
+                    border-bottom: 1px solid #4de68e;
+                }
+            }
+        }
+
+
+        .btn_github {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            margin-left: 30px;
+            vertical-align: top;
+            background: url(../../img/icon_github_white.png) 0 0 no-repeat;
+            background-size: 32px 32px;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+
+        .btn_menu {
+            display: none;
+            margin-left: 30px;
+            vertical-align: top;
+            background: url(../../img/icon_hamburger_white.png) no-repeat 0 0;
+            background-size: 32px 32px;
+            width: 32px;
+            height: 32px;
+
+            @include tablet-1080 {
+                display: inline-block;
+            }
+
+            @include mobile {
+                display: inline-block;
+                background-size: 26px 26px;
+                width: 26px;
+                height: 26px;
+                margin-left: 20px;
+            }
+        }
+
+        .btn_close {
+            display: none;
+            vertical-align: top;
+            background-image: url(../../img/icon_close_black.png);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 32px;
+
+            @include tablet-1080 {
+                -webkit-background-size: 32px 32px;
+                background-size: 32px 32px;
+            }
+            @include mobile {
+                -webkit-background-size: 26px 26px;
+                background-size: 26px 26px;
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        .btn_github, .btn_menu, .btn_close {
+
+            @include tablet-1080 {
+                margin-top: 3px;
+                margin-left: 26px;
+            }
+
+            @include mobile {
+                margin-top: 0;
+                margin-left: 20px;
+            }
+        }
+
+        
+    }
+}
+
+
+
+  
+  $panelcount: 2; // set # of panels/sections here
+  
+  .slide_wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    perspective: 1000;
+    
+  }
+  
+  .slide_inner {
+    width: percentage($panelcount);
+    height: 100%;
+
+    .slide_area {
+    
+        height: 100%;
+        width: calc( 100% / #{$panelcount} );
+        float: left;
+        position: relative;
+    }
+    
+    
+    .section__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-size: 30px;
+    color: #fff;
+    }
+}

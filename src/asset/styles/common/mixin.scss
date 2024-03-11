@@ -1,0 +1,191 @@
+/* border-radius */
+@mixin border-radius($rad) {
+	-o-border-radius: $rad;
+	-ms-border-radius: $rad;
+	-moz-border-radius: $rad;
+	-webkit-border-radius: $rad;
+	border-radius: $rad;
+}
+
+/* box-sizing */
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* 말줄임 */
+@mixin ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+//2줄말줄임
+@mixin ellipsis2{
+	display:-webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+	-webkit-line-clamp:2;
+}
+  //3줄말줄임
+@mixin ellipsis3{
+	display:-webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+	-webkit-line-clamp:3;
+}
+
+@mixin clear {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+/* flex */
+@mixin flex($properties) {
+    @if $properties == 'flex' {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    } @else if $properties == 'inline-flex' {
+        display: -ms-inline-flexbox;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+    }
+}
+
+//flex-wrap
+@mixin flex_wrap($properties) {
+    @if $properties == 'nowrap' {
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    } @else if $properties == 'wrap' {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    } @else if $properties == 'wrap-reverse' {
+        -webkit-flex-wrap: wrap-reverse;
+        -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    }
+}
+
+//justify-content
+@mixin flex_justify($properties) {
+    @if $properties == 'flex-start' {
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    } @else if $properties == 'flex-end' {
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    } @else if $properties == 'center' {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    } @else if $properties == 'space-between' {
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    } @else if $properties == 'space-around' {
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+}
+
+// align-items
+@mixin flex_align_items($properties) {
+    @if $properties == 'center' {
+        -webkit-align-items: center;
+        -ms-flex-pack: center;
+        align-items: center;
+    } 
+}
+
+//flex-direction
+@mixin flex-direction($value: row) {
+    @if $value == row-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: horizontal;
+    } @else
+    if $value == column {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+    } @else
+    if $value == column-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+    } @else {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+    }
+    -webkit-flex-direction: $value;
+    -moz-flex-direction: $value;
+    -ms-flex-direction: $value;
+    flex-direction: $value;
+}
+
+
+//flex center
+@mixin flex_center() {
+    @include flex(flex);
+    @include flex_align_items(center);
+    @include flex_justify(center);
+}
+
+
+/* position */
+@mixin absolute_zero {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+@mixin fixed_zero {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+
+/* 반응형 */
+@mixin tablet-1200 {
+    @media (max-width: 1200px) and (min-width: 1080px){
+        @content;
+    }
+}
+
+@mixin tablet-1080 {
+    @media (max-width: 1080px) and (min-width: 768px){
+        @content;
+    }
+}
+
+
+@mixin mobile {
+    @media (max-width: 767px){
+        @content;
+    }
+}
+
+@mixin mobile-374 {
+    @media (max-width: 374px){
+        @content;
+    }
+}
