@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
+import About from "./components/About";
 import Stack from "./components/Stack";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
@@ -14,6 +15,7 @@ const App = () => {
         <Intro />
         <Header />
         <Main>
+            <About/>
             <Stack />
             <Project />
             <Contact />
