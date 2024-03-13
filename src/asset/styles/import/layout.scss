@@ -429,9 +429,6 @@
     }
 }
 
-
-
-  
   $panelcount: 2; // set # of panels/sections here
   
   .slide_wrapper{
@@ -439,7 +436,6 @@
     height: 100%;
     overflow: hidden;
     perspective: 1000;
-    
   }
   
   .slide_inner {
@@ -465,3 +461,5 @@
     color: #fff;
     }
 }
+
+
