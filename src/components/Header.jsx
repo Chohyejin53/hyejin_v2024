@@ -33,10 +33,6 @@ const Header = () => {
         };
     }, []);
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
     const handleMobileMenuToggle = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
         document.body.style.overflow = isMobileMenuOpen ? 'auto' : 'hidden';
@@ -94,7 +90,7 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
-            <button className="btn_top" onClick={scrollToTop}>Top</button>
+            {/* <button className="btn_top" onClick={scrollToTop}>Top</button> */}
         </header>
     );
 };

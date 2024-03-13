@@ -39,41 +39,38 @@ const Stack = () => {
   const handleCardClick = () => {
     setFlippedIndex((prevState) => !prevState);
   };
-    
-    
-    
 
     
     return (
-        <section id="port" ref={horizontalRef}>
-            <div className="port__inner">
-                <h2 className="port__title">
+        <section id="stack" ref={horizontalRef}>
+            <div className="stack__inner">
+                <h2 className="stack__title">
                 경험과 공부를 통해 <br />
                 저는 매일 성장하고 있습니다. 
                 </h2>
-                <div className="port__wrap">
-                    {STACKLIST.map((port, key) => (
+                <div className="stack__wrap">
+                    {STACKLIST.map((stack, key) => (
                         <div 
-                            className={`port__item p${key + 1} ${flippedIndex === key ? 'on' : ''} card_item` }
+                            className={`stack__item p${key + 1} ${flippedIndex === key ? 'on' : ''} card_item` }
                             key={key}
                             ref={(el) => (sectionRef.current[key] = el)}
                             onClick={handleCardClick}
                         >
-                            <span className="num">{port.num}.</span>
+                            <span className="num">{stack.num}.</span>
                             <div className="front_card">
                                 <button 
-                                    // href={port.code} 
+                                    // href={stack.code} 
                                     className="img front_card" 
                                     rel="noreferrer noopener"
                                 >
-                                    <img src={port.img} alt={port.name} />
+                                    <img src={stack.img} alt={stack.name} />
                                 </button>
                             </div>
                             <div className="back_card">
-                                <h3 className="title">{port.title}</h3>
-                                <p className="desc">{port.desc}</p>
+                                <h3 className="title">{stack.title}</h3>
+                                <p className="desc">{stack.desc}</p>
                                 <a 
-                                    href={port.view} 
+                                    href={stack.view} 
                                     className="site" 
                                     rel="noreferrer noopener"
                                 >
