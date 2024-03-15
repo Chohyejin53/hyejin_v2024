@@ -13,11 +13,22 @@ function sortCareerList(careerList) {
     });
 }
 
-const Project = () => {
+const Project = ({ tag }) => {
     const sortedCareerList01 = sortCareerList(CAREERLIST01);
     const sortedCareerList02 = sortCareerList(CAREERLIST02);
     
+   
+    const getLabelClass = (tag) => {
+        if (tag.includes('maintenance')) {
+            return 'maintenance';
+        } else if (tag.includes('new')) {
+            return 'new';
+        } else {
+            return tag.toLowerCase();
+        }
+    };
     
+
 
     return (
         <div className="section_main_project" id="project">
@@ -44,7 +55,7 @@ const Project = () => {
                                         <dd className="info_des">
                                             {project.tag.map((tag, index) => (
                                                 <span key={index} className="text_area">
-                                                    <span className={`label_${index % 2 === 0 ? 'olive' : 'orange'}`}>{tag}</span>
+                                                    <span className={`label label_${getLabelClass(tag)}`}>{tag}</span>
                                                 </span>
                                             ))}
                                         </dd>
@@ -91,7 +102,7 @@ const Project = () => {
                                             <dd className="info_des">
                                                 {project.tag.map((tag, index) => (
                                                     <span key={index} className="text_area">
-                                                        <span className={`label_${index % 2 === 0 ? 'olive' : 'orange'}`}>{tag}</span>
+                                                        <span className={`label label_${getLabelClass(tag)}`}>{tag}</span>
                                                     </span>
                                                 ))}
                                             </dd>
