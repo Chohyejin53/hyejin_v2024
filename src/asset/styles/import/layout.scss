@@ -3,7 +3,7 @@
 .header {
     position: sticky;
     top: 0;
-    background-color: #000;
+    background-color: #e9ffdd;
     
     &.fixed {
         -webkit-backdrop-filter: blur(21.9px);
@@ -11,6 +11,7 @@
         background-color: rgba(255, 255, 255, 0.5);
         transition: ease-in-out 1s background-color;
         z-index: 9999;
+        height: 54px;
 
         .btn_wrap {
             .btn_blog {
@@ -57,18 +58,18 @@
 
 
         .logo{
-            color: #222;
+            color: #1d2430;
         }
 
         .gnb {
             li {
-                color: #222;
+                color: #1d2430;
                 &:hover {
                     background-color: rgba(0, 0, 0, 0.08);
                 }
     
                 &.on {
-                    background-color: #000;
+                    background-color: #1d2430;
     
                     a {
                         color: #fff;
@@ -116,7 +117,7 @@
         }
 
         .logo{
-            color: #222;
+            color: #1d2430;
         }
     }
     
@@ -232,7 +233,7 @@
         padding-bottom: calc(constant(safe-area-inset-bottom) + 25px);
         padding-bottom: -webkit-calc(env(safe-area-inset-bottom) + 25px);
         padding-bottom: calc(env(safe-area-inset-bottom) + 25px);
-        background-color: #4de68e;
+        background-color: #e9ffdd;
         -ms-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;

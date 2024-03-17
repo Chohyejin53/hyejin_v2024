@@ -15,7 +15,7 @@ const Stack = () => {
         const sections = sectionRefs.current;
 
         let scrollTween = gsap.to(sections, {
-            xPercent: -120 * (sections.length - 1),
+            xPercent: -130 * (sections.length - 1),
             ease: "none",
             scrollTrigger: {
                 trigger: horizontal,
@@ -44,32 +44,30 @@ const Stack = () => {
 
     
     return (
-        <section id="stack" ref={horizontalRef}>
-            <div className="stack__inner">
-                <h2 className="stack__title">
+        <section id="stack" className="section_01" ref={horizontalRef}>
+            <div className="inner">
+                <h2 className="stack_title">
                 경험과 공부를 통해 <br />
                 저는 매일 성장하고 있습니다. 
                 </h2>
-                <div className="stack__wrap">
+                <div className="stack_wrap">
                     {STACKLIST.map((stack, key) => (
                         <div 
-                            className={`stack__item p${key + 1} ${isFlipped[key] ? 'flipped' : ''} card_item` }
+                            className={`stack_item ${isFlipped[key] ? 'flipped' : ''} stack_item` }
                             key={key}
                             ref={(el) => (sectionRefs.current[key] = el)}
                             onClick={() => handleFlip(key)}
                         >
-                            <span className="num">{stack.num}.</span>
                             <div className="front_card">
-                                <button 
-                                    // href={stack.code} 
-                                    className="img front_card" 
-                                    rel="noreferrer noopener"
-                                >
-                                    <h3 className="title">{stack.title}</h3>
-                                </button>
+                                <span className="num">{stack.num}.</span>
+                                <h3 className="title">{stack.title}</h3>
                             </div>
                             <div className="back_card">
-                                <p className="desc">{stack.desc}</p>
+                                <ul className="stack_list">
+                                    {stack.desc.map((item, key) => (
+                                        <li key={key} className="list_item">{item}</li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     ))}

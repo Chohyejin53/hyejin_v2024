@@ -12,56 +12,56 @@ export const CAREERLIST01 = [
         tag: ["SME", "new"],
         period: "Mar.2022",
         orderingDepartment: "Smart Place",
-        link: "https://campaign.naver.com/smp_loan_care/",
-        project: "마트 플레이스 대출안심케어 신규 마크업"
+        link: "campaign.naver.com/smp_loan_care/",
+        project: "스마트 플레이스 대출안심케어 신규 마크업"
     },
     {
         num: "003",
-        tag: ["Blog", "maintenance"],
-        period: "Sept.2022",
-        orderingDepartment: "NaverBlog",
-        link: "campaign.naver.com/blogpeople/",
-        project: "블로그피플 작가인터뷰 신규 마크업"
+        tag: ["happybean", "new"],
+        period: "Mar.2022",
+        orderingDepartment: "happybean",
+        link: "happybean.naver.com/flower/event/36",
+        project: "지구의 날 기획전 신규 마크업"
     },
     {
         num: "004",
-        tag: ["Blog", "maintenance"],
-        period: "Sept.2022",
-        orderingDepartment: "NaverBlog",
-        link: "campaign.naver.com/blogpeople/",
-        project: "블로그피플 작가인터뷰 신규 마크업"
+        tag: ["LICO", "maintenance"],
+        period: "Apr.2022",
+        orderingDepartment: "STUDIO LICO",
+        link: "studiolico.com/work",
+        project: "LICO 홈페이지 내 Credit 메뉴 추가"
     },
     {
         num: "005",
-        tag: ["Blog", "maintenance"],
-        period: "Sept.2022",
-        orderingDepartment: "NaverBlog",
-        link: "campaign.naver.com/blogpeople/",
-        project: "블로그피플 작가인터뷰 신규 마크업"
+        tag: ["SellerCenter", "new"],
+        period: "May.2022 - Jun.2022",
+        orderingDepartment: "LINE PAY",
+        link: "seller.line.me/",
+        project: "셀러센터 신규 서비스 마크업"
     },
     {
         num: "006",
-        tag: ["Blog", "maintenance"],
-        period: "Sept.2022",
-        orderingDepartment: "NaverBlog",
-        link: "campaign.naver.com/blogpeople/",
-        project: "블로그피플 작가인터뷰 신규 마크업"
+        tag: ["happybean", "new"],
+        period: "Jun.2022",
+        orderingDepartment: "happybean",
+        link: "happybean.naver.com/flower/event/41",
+        project: "경북소셜문화관광기획전 신규 마크업"
     },
     {
         num: "007",
-        tag: ["Blog", "maintenance"],
-        period: "Sept.2022",
-        orderingDepartment: "NaverBlog",
-        link: "campaign.naver.com/blogpeople/",
-        project: "블로그피플 작가인터뷰 신규 마크업"
+        tag: ["BAND", "new"],
+        period: "Aug.2022",
+        orderingDepartment: "STUDIO LICO",
+        link: "promotion.band.us/d/promotion/usbandguide",
+        project: "미국 밴드가이드 신규 마크업"
     },
     {
         num: "008",
-        tag: ["Blog", "maintenance"],
-        period: "Sept.2022",
-        orderingDepartment: "NaverBlog",
-        link: "campaign.naver.com/blogpeople/",
-        project: "블로그피플 작가인터뷰 신규 마크업"
+        tag: ["NAVER", "maintenance"],
+        period: "2022",
+        orderingDepartment: "NAVER.corp",
+        link: "navercorp.com/service/featured",
+        project: "기업 웹사이트 콘텐츠 내용 유지보수"
     },
     {
         num: "009",
@@ -73,24 +73,22 @@ export const CAREERLIST01 = [
     },
     {
         num: "010",
-        tag: ["Blog", "maintenance"],
+        tag: ["Npay", "maintenance"],
         period: "Sept.2022",
-        orderingDepartment: "NaverBlog",
-        link: "campaign.naver.com/blogpeople/",
-        project: "블로그피플 작가인터뷰 신규 마크업"
+        orderingDepartment: "Npay",
+        link: "npayad.naver.com",
+        project: "스토어 알림받기 페이지 수정마크업"
     },
     {
         num: "011",
-        tag: ["Blog", "maintenance"],
-        period: "Sept.2022",
-        orderingDepartment: "NaverBlog",
-        link: "campaign.naver.com/blogpeople/",
-        project: "블로그피플 작가인터뷰 신규 마크업"
-    },
-    
-    
-    
+        tag: ["Promotion", "maintenance"],
+        period: "Oct.2022",
+        orderingDepartment: "Naver Marketing",
+        link: "campaign.naver.com/naverdetails/point/",
+        project: "활용백서 포인트백서 유지보수"
+    }
 ];
+
 
 export const CAREERLIST02 = [
     {
@@ -114,7 +112,7 @@ export const CAREERLIST02 = [
         tag: ["Campaign", "maintenance"],
         period: "Apr.2023 ~ ",
         orderingDepartment: "NaverBlog",
-        link: "https://www.kyobobook.co.kr/handwriting/contest",
+        link: "www.kyobobook.co.kr/handwriting/contest",
         project: "손글씨 대회 캠페인 퍼블리싱 (2023 / 2024) "
     },
     {
