@@ -34,7 +34,8 @@ const Stack = () => {
         };
     }, []);
 
-    const [isFlipped, setIsFlipped] = useState([]);
+    const [isFlipped, setIsFlipped] = useState(new Array(STACKLIST.length).fill(false));
+
 
     const handleFlip = (index) => {
         const flippedState = [...isFlipped];

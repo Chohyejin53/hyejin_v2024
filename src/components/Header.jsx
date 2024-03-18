@@ -3,11 +3,12 @@ import React, { useState, useEffect } from "react";
 const Header = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrollTop, setScrollTop] = useState(0);
+    const [activeMenuItem, setActiveMenuItem] = useState('intro');
 
     const links = [
         { id: 'intro', text: 'Introduce' },
         { id: 'stack', text: 'Stack' },
-        { id: 'project', text: 'Main Project' },
+        { id: 'project', text: 'Project' },
         { id: 'contact', text: 'Contact' }
     ];
 
@@ -39,14 +40,30 @@ const Header = () => {
     };
 
     const handleMenuItemClick = (id) => {
-        const headerHeight = document.querySelector('.header').offsetHeight;
-        const element = document.getElementById(id);
-        const offsetTop = element.offsetTop - headerHeight;
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        setActiveMenuItem(id);
         if (isMobileMenuOpen) {
             handleMobileMenuToggle();
         }
     };
+
+    useEffect(() => {
+        function handleScrollHighlight() {
+            links.forEach(link => {
+                const element = document.getElementById(link.id);
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const offsetTop = element.offsetTop - headerHeight;
+
+                if (scrollTop >= offsetTop && scrollTop < offsetTop + element.offsetHeight) {
+                    setActiveMenuItem(link.id);
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScrollHighlight);
+        return () => {
+            window.removeEventListener('scroll', handleScrollHighlight);
+        };
+    }, [scrollTop, links]);
 
     return (
         <header className={`header ${scrollTop > 0 ? 'fixed' : ''} ${isMobileMenuOpen ? 'on' : ''}`}>
@@ -72,7 +89,7 @@ const Header = () => {
             <div className="inner">
                 <ul className="gnb">
                     {links.map(link => (
-                        <li key={link.id} className={link.id === 'intro' ? 'on' : ''}>
+                        <li key={link.id} className={activeMenuItem === link.id ? 'on' : ''}>
                             <a href={`#${link.id}`} onClick={() => handleMenuItemClick(link.id)}>{link.text}</a>
                         </li>
                     ))}
@@ -80,7 +97,7 @@ const Header = () => {
                 <div className="menu_wrap">
                     <ul className="menu_list">
                         {links.map(link => (
-                            <li key={link.id} className={link.id === 'intro' ? 'on' : ''}>
+                            <li key={link.id} className={activeMenuItem === link.id ? 'on' : ''}>
                                 <a href={`#${link.id}`} onClick={() => handleMenuItemClick(link.id)}>{link.text}</a>
                             </li>
                         ))}
