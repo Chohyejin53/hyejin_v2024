@@ -1,6 +1,6 @@
 import React from "react";
 import '../asset/styles/portfolio_v4.scss'
-import Stack from "./Stack";
+// import Stack from "./Stack";
 const About = () => {
     return (
         <div class="section_00" id="intro">
@@ -15,7 +15,7 @@ const About = () => {
                     시멘틱한 마크업을 잘 다룰 수 있는 기본이 탄탄한 능력있는 프론트엔드 개발자가 되기 위해 현재는 JavaScript 기반 언어를 공부하고 있습니다. 
                 </p>
             </div>
-            <Stack />
+            {/* <Stack /> */}
         </div>
     )};
 

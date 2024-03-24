@@ -32,9 +32,12 @@ const Project = ({ tag }) => {
         <div className="section_main_project" id="project">
             <div className="inner">
                 <h2 className="section_title">
-                    저는 퍼블리셔로서, ui개발자로서
-                    <br /> 다양한 프로젝트를 진행했습니다.
+                    실무에서 다양한 프로젝트를 진행했습니다. 
                 </h2>
+                <p className="des_text">
+                더 나은 코드에 대한 고민을 바탕으로 진행한 작업들과, 예상치 못한 상황에서 대응해 본 경험들은 <br />
+                기술적 성장을 넘어 서비스를 바라보고, 사용자 편의를 생각할 줄 아는 개발자로 성장하는 계기들이 되었습니다.
+                </p>
                 <div className="carrer_box">
                     <div className="carrer_01">
                         <h3 className="section_sub_title">첫번째, 인컴즈에서의 이야기</h3>

@@ -7,6 +7,7 @@ const Header = () => {
 
     const links = [
         { id: 'intro', text: 'Introduce' },
+        { id: 'stack', text: 'stack' },
         { id: 'project', text: 'Project' },
         { id: 'contact', text: 'Contact' }
     ];
