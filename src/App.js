@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
 import About from "./components/About";
-import Stack from "./components/Stack";
+// import Stack from "./components/Stack";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -16,7 +16,7 @@ const App = () => {
         <Header />
         <Main>
             <About/>
-            <Stack />
+            {/* <Stack /> */}
             <Project />
             <Contact />
         </Main>

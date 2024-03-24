@@ -47,9 +47,9 @@ const Stack = () => {
     return (
         <section id="stack" className="section_01" ref={horizontalRef}>
             <div className="inner">
-                <h2 className="stack_title">
-                경험과 공부를 통해 <br />
-                저는 매일 성장하고 있습니다. 
+                <h2 className="section_sub_title">
+                    경험과 공부를 통해 <br />
+                    저는 매일 성장하고 있습니다. 
                 </h2>
                 <div className="stack_wrap">
                     {STACKLIST.map((stack, key) => (
