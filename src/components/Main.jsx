@@ -1,11 +1,11 @@
 import React from "react";
 
 const Main = ({ children }) => {
-    return (
+  return (
     <main id="main" role="main">
-        {children}
+      {children}
     </main>
-    );
+  );
 };
 
 export default Main;

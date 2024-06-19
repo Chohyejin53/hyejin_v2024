@@ -10,18 +10,20 @@ import Footer from "./components/Footer";
 import Main from "./components/Main";
 
 const App = () => {
-    return <>
-        {/* <Skip /> */}
-        <Intro />
-        <Header />
-        <Main>
-            <About/>
-            <Stack />
-            <Project />
-            <Contact />
-        </Main>
-        <Footer />
-    </>;
+  return (
+    <>
+      {/* <Skip /> */}
+      <Intro />
+      <Header />
+      <Main>
+        <About />
+        <Stack />
+        <Project />
+        <Contact />
+      </Main>
+      <Footer />
+    </>
+  );
 };
 
 export default App;
